@@ -60,7 +60,7 @@ Quantifier "+" to match 1 or more of the precending token placed outside of [].
 
 @ character: matches a "@" character.
 
-2) Second capturing group ([\da-z\.-]+):
+#### 2) Second capturing group ([\da-z\.-]+):
 
 \d : matches any digit character 0-9.
 
@@ -74,7 +74,7 @@ Quantifier "+" to match 1 or more of the precending token placed outside of [].
 
 \. character to match a literal dot, has to be escaped by using a slash in order to match a period.
 
-3) Third capturing goup ([a-z\.]{2,6}):
+#### 3) Third capturing goup ([a-z\.]{2,6}):
 
 Range a-z: matches a character in the range "a" to "z", case sensitive.
 
