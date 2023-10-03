@@ -44,7 +44,7 @@ These allow to specify a set of characters that can match at a certain position.
 
 Parentheses () are used to create capture groups, which allow you to extract portions of a matched text.
 
-1) First capturing group ([a-z0-9_\.-]+):
+#### 1) First capturing group ([a-z0-9_\.-]+):
 
 Range a-z: matches a character in the range "a" to "z", case sensitive.
 
