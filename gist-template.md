@@ -44,7 +44,7 @@ These allow to specify a set of characters that can match at a certain position.
 
 Parentheses () are used to create capture groups, which allow you to extract portions of a matched text.
 
-#### First capturing group ([a-z0-9_\.-]+):
+1) First capturing group ([a-z0-9_\.-]+):
 
 Range a-z: matches a character in the range "a" to "z", case sensitive.
 
@@ -60,7 +60,7 @@ Character - : matches a "-" character.
 
 @ character: matches a "@" character.
 
-#### Second capturing group ([\da-z\.-]+):
+2) Second capturing group ([\da-z\.-]+):
 
 \d : matches any digit character 0-9.
 
@@ -74,7 +74,7 @@ Character "-" : matches a "-" character.
 
 \. character to match a literal dot, has to be escaped by using a slash in order to match a period.
 
-#### Third capturing goup ([a-z\.]{2,6}):
+3) Third capturing goup ([a-z\.]{2,6}):
 
 Range a-z: matches a character in the range "a" to "z", case sensitive.
 
