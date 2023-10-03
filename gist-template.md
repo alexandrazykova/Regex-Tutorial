@@ -8,7 +8,7 @@ How is it useful? It will allow a quick and easy validation of entered emalis to
 
 Regular expression is a set of characters that is widely used to search for, match, validate, clean, and manipulate input. Let's break down to take a closer look at matching an email regex, and components needed to build a pattern to match character combinations in strings.
 
-/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ expression contains beginning of the string, local part of the email address, symbol '@' which separates local and domain parts, literal period (.), top-level domain, and, finally, end of the string. 
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ expression contains beginning of the string, local part of the email address, symbol '@' which separates local and domain parts, literal period (.), top-level domain, and, finally, end of the string.
 
 
 ## Table of Contents
@@ -16,40 +16,72 @@ Regular expression is a set of characters that is widely used to search for, mat
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
 
 ### Anchors
-Anchors: ^ and $ are used to specify the start and end of a line or string.
+
+"^" and "$" are used to specify the start and end of a line or string.
 
 ### Quantifiers
-Quantifiers: These are used to specify how many times a character or group should occur. Examples include *, +, ?, and {}
+
+These are used to specify how many times a character or group should occur. Examples include *, +, ?, and {}
+
+In the email validation expression, we are using the following.
+"+" quantifier to match 1 or more of the precending token
+{2,6} quantifier to match between 2 and 6 of the precending token
 
 ### Character Classes
-character Classes: These allow you to specify a set of characters that can match at a certain position. For example, [aeiou] matches any vowel.
-
-### Flags
+These allow to specify a set of characters that can match at a certain position. In out case, we are using \d which matches any digit character 0-9
 
 ### Grouping and Capturing
 
-Capture Groups: Parentheses () are used to create capture groups, which allow you to extract portions of a matched text.
+Capturing Groups: Parentheses () are used to create capture groups, which allow you to extract portions of a matched text.
+
+First capturing group ([a-z0-9_\.-]+)
+Range a-z: matches a character in the range "a" to "z", case sensitive
+Range 0-9: matches a character in the range "0" to "9"
+_ character: matches a "_" characters
+\. character: matches any character(digits, letters,special characters, whitespace, etc.) except for a newline character \n
+- character: matches a "-" character
++ quantifier to match 1 or more of the precending token placed outside of []
+
+@ character: matches a "@" character
+
+Second capturing group ([\da-z\.-]+)
+\d : matches any digit character 0-9
+Range a-z: matches a character in the range "a" to "z", case sensitive
+\. character: matches any character(digits, letters,special characters, whitespace, etc.) except for a newline character \n
+- character: matches a "-" character
++ quantifier to match 1 or more of the precending token placed outside of []
+
+\. character to match a literal dot, has to be escaped by using a slash in order to match a period
+
+Third capturing goup ([a-z\.]{2,6})
+Range a-z: matches a character in the range "a" to "z", case sensitive
+\. character: matches any character(digits, letters,special characters, whitespace, etc.) except for a newline character \n
+{2,6} quantifier to match between 2 and 6 of the precending token
 
 ### Bracket Expressions
+Characters defined inside a set of square brackets [] are the once that we want to match. It is also known as a positive character group, because they outline the characters we want to include. Our email regex includes three sets
+
+([a-z0-9_\.-]+)
+([\da-z\.-]+)
+([a-z\.]{2,6})
 
 ### Greedy and Lazy Match
 
-### Boundaries
+Regular expressions have 2 ways of searching for a match:
 
-### Back-references
+Greedy - to match the longest possible string.
+Lazy - to match the smallest possible string.
 
-### Look-ahead and Look-behind
+In our email matching regex, first and second capturing groups are using greedy + quantifier to match as many characters as possible while still allowing the rest of the pattern to match.
+
+Also, {} quantifier is used to specify matching range, which is from 2 to 6 characters.
 
 ## Author
 
