@@ -56,7 +56,7 @@ Character _ : matches a "_" characters.
 
 Character - : matches a "-" character.
   
-+ quantifier to match 1 or more of the precending token placed outside of [].
+Quantifier "+" to match 1 or more of the precending token placed outside of [].
 
 @ character: matches a "@" character.
 
@@ -70,7 +70,7 @@ Range a-z: matches a character in the range "a" to "z", case sensitive.
 
 Character "-" : matches a "-" character.
   
-+ quantifier to match 1 or more of the precending token placed outside of [].
+Quantifier "+" to match 1 or more of the precending token placed outside of [].
 
 \. character to match a literal dot, has to be escaped by using a slash in order to match a period.
 
@@ -86,9 +86,9 @@ Range a-z: matches a character in the range "a" to "z", case sensitive.
 
 Characters defined inside a set of square brackets [] are the once that we want to match. It is also known as a positive character group, because they outline the characters we want to include. Our email regex includes three sets.
 
-([a-z0-9_\.-]+)
-([\da-z\.-]+)
-([a-z\.]{2,6})
+One ([a-z0-9_\.-]+),
+Two ([\da-z\.-]+),
+Three ([a-z\.]{2,6}).
 
 ### Greedy and Lazy Match
 
