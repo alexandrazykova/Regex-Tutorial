@@ -50,11 +50,11 @@ Range a-z: matches a character in the range "a" to "z", case sensitive.
 
 Range 0-9: matches a character in the range "0" to "9".
 
-_ character: matches a "_" characters.
+Character _ : matches a "_" characters.
 
 \. character: matches any character(digits, letters,special characters, whitespace, etc.) except for a newline character \n.
 
-"-" character: matches a "-" character.
+Character - : matches a "-" character.
   
 + quantifier to match 1 or more of the precending token placed outside of [].
 
@@ -68,7 +68,7 @@ Range a-z: matches a character in the range "a" to "z", case sensitive.
 
 \. character: matches any character(digits, letters,special characters, whitespace, etc.) except for a newline character \n.
 
-"-" character: matches a "-" character.
+Character "-" : matches a "-" character.
   
 + quantifier to match 1 or more of the precending token placed outside of [].
 
