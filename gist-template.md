@@ -70,7 +70,7 @@ Range a-z: matches a character in the range "a" to "z", case sensitive.
 
 Character "-" : matches a "-" character.
   
-Quantifier "+" to match 1 or more of the precending token placed outside of [].
+Quantifier + to match 1 or more of the precending token placed outside of [].
 
 \. character to match a literal dot, has to be escaped by using a slash in order to match a period.
 
