@@ -24,49 +24,51 @@ Regular expression is a set of characters that is widely used to search for, mat
 
 ### Anchors
 
-"^" and "$" are used to specify the start and end of a line or string.
+"^" and "$" anchors are used to specify the start and end of a line or string.
 
 ### Quantifiers
 
 These are used to specify how many times a character or group should occur. Examples include *, +, ?, and {}
 
 In the email validation expression, we are using the following.
-"+" quantifier to match 1 or more of the precending token
-{2,6} quantifier to match between 2 and 6 of the precending token
+"+" quantifier to match 1 or more of the precending token.
+{2,6} quantifier to match between 2 and 6 of the precending token.
 
 ### Character Classes
-These allow to specify a set of characters that can match at a certain position. In out case, we are using \d which matches any digit character 0-9
+
+These allow to specify a set of characters that can match at a certain position. In out case, we are using \d which matches any digit character 0-9.
 
 ### Grouping and Capturing
 
 Capturing Groups: Parentheses () are used to create capture groups, which allow you to extract portions of a matched text.
 
-First capturing group ([a-z0-9_\.-]+)
-Range a-z: matches a character in the range "a" to "z", case sensitive
-Range 0-9: matches a character in the range "0" to "9"
-_ character: matches a "_" characters
-\. character: matches any character(digits, letters,special characters, whitespace, etc.) except for a newline character \n
-- character: matches a "-" character
-+ quantifier to match 1 or more of the precending token placed outside of []
+First capturing group ([a-z0-9_\.-]+):
+Range a-z: matches a character in the range "a" to "z", case sensitive.
+Range 0-9: matches a character in the range "0" to "9".
+_ character: matches a "_" characters.
+\. character: matches any character(digits, letters,special characters, whitespace, etc.) except for a newline character \n.
+- character: matches a "-" character.
++ quantifier to match 1 or more of the precending token placed outside of [].
 
-@ character: matches a "@" character
+@ character: matches a "@" character.
 
-Second capturing group ([\da-z\.-]+)
-\d : matches any digit character 0-9
-Range a-z: matches a character in the range "a" to "z", case sensitive
-\. character: matches any character(digits, letters,special characters, whitespace, etc.) except for a newline character \n
-- character: matches a "-" character
-+ quantifier to match 1 or more of the precending token placed outside of []
+Second capturing group ([\da-z\.-]+):
+\d : matches any digit character 0-9.
+Range a-z: matches a character in the range "a" to "z", case sensitive.
+\. character: matches any character(digits, letters,special characters, whitespace, etc.) except for a newline character \n.
+- character: matches a "-" character.
++ quantifier to match 1 or more of the precending token placed outside of [].
 
-\. character to match a literal dot, has to be escaped by using a slash in order to match a period
+\. character to match a literal dot, has to be escaped by using a slash in order to match a period.
 
-Third capturing goup ([a-z\.]{2,6})
-Range a-z: matches a character in the range "a" to "z", case sensitive
-\. character: matches any character(digits, letters,special characters, whitespace, etc.) except for a newline character \n
-{2,6} quantifier to match between 2 and 6 of the precending token
+Third capturing goup ([a-z\.]{2,6}):
+Range a-z: matches a character in the range "a" to "z", case sensitive.
+\. character: matches any character(digits, letters,special characters, whitespace, etc.) except for a newline character \n.
+{2,6} quantifier to match between 2 and 6 of the precending token.
 
 ### Bracket Expressions
-Characters defined inside a set of square brackets [] are the once that we want to match. It is also known as a positive character group, because they outline the characters we want to include. Our email regex includes three sets
+
+Characters defined inside a set of square brackets [] are the once that we want to match. It is also known as a positive character group, because they outline the characters we want to include. Our email regex includes three sets.
 
 ([a-z0-9_\.-]+)
 ([\da-z\.-]+)
@@ -81,7 +83,7 @@ Lazy - to match the smallest possible string.
 
 In our email matching regex, first and second capturing groups are using greedy + quantifier to match as many characters as possible while still allowing the rest of the pattern to match.
 
-Also, {} quantifier is used to specify matching range, which is from 2 to 6 characters.
+Also, {} quantifier is used in the third capturing group to specify matching range, which is from 2 to 6 characters.
 
 ## Author
 
