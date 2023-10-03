@@ -30,9 +30,9 @@ Regular expression is a set of characters that is widely used to search for, mat
 
 These are used to specify how many times a character or group should occur. Examples include *, +, ?, and {}
 
-In the email validation expression, we are using the following.
+In the email validation expression, we are using the following:
 
-"+" quantifier to match 1 or more of the precending token.
+Quantifier "+" to match 1 or more of the precending token.
 
 {2,6} quantifier to match between 2 and 6 of the precending token.
 
